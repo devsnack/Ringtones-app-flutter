@@ -1,0 +1,822 @@
+/* Avoid global CSS affected ul/ol style within diagram, so specify explictly here. */
+svg ul {
+	margin-top: 0px;
+	margin-bottom: 10px;	
+}
+
+svg ol {
+	margin-top: 0px;
+	margin-bottom: 10px;	
+}
+
+
+
+
+div.picker { 
+	z-index: 10007; 
+}
+
+.geSidebar {
+	background: #F7F7F7;
+}
+
+.geToolbarContainer {
+	background: #F7F7F7;
+}
+
+.vpHeading {
+    width: 100%;
+    height: 40px;
+    
+    position: absolute;
+    
+    background-color: white;
+}
+
+.vpHeadingTitle {
+    margin-left: 5px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAdCAYAAAC9pNwMAAAEW0lEQVR42sWW61MaVxiH89f2Sy8znfZ7ddqZTIjaaZyUixjlJogigtggElRMNXKTO3Jbdl3uN0EgqEh+PbsmSyxLOh2d9sPD7O77m33Yc/Y9Z59MTU2BY3p6+j/hk+8J9zM/Pw+TyYS1tTWBjY0NmM3mR8VisfAuQWwwGHjkcjnP0tISAoEAOp0Oms3mo3F5eck/1EfxNHSGTaQLXSTZtkA810AkW+NJ0TVQbA3hTE249jlR6q5+RnLh7ORMo3kBo9H4UUzGfX49jG/UHXynbo/xraqNWVsLusMLfLUoXv9e24b2bQtPLW18vSye+WGljVL1MzE34X/6/agBqNwORaleXaHW7aEy/CBe5+iR+vX15MzgFhet1n3xnscPug9Q3VtRmHYf7EUX2d5wYoZtdUFfXpHjSZkBP9Srq6sjsd11ALrVA9W4FIWuNcFU6qCanQmZNphqHXT9YuI9ciRTrlTuP7FBvwKWocHkKIFcNgsqkx6Rzdw//zv/VCfQNM2LOSffTnq9HvF4HKFQiCccDiOTySCfz4Nl2UejWCzyLqGPV3Rq7DtfY9uyjj+sJuxsbyIeCaBRLaBaOke5eI7zRxCXSiXodLpRH0tVVrzaTkNpSfAsWs+gdeRg3C/A4CrA6c2jyOb4oXoInHwkJuOttPgw57zBr7t9gTnHe8zYe5DY32P1uIHSOZlDinoQDMOMxNxEH3o8qJM+rpIeHOMDUGi3kU4m+Xl/CLlcDlqt9n4fMzdAri9Otn6Js3gMSSJ/CJxco9GMxBtb26AqDaSLVRHIWs3kkYjFkEgkHkQqlYJKpRqJteRfBE8DCPh9E/Dzu9VDCQaD/BwLfaxWq/k+jkWjPFECF/IT4WPC3ZNzCX28qFRgdUWNJaUMy4tyaJaV2HftIBENIhryI0IIBwP88SRCpB75Qp2vRUJQvVKMxC+kGsj0e5hXOXheapzQWDww7Uax7ojA5gpi130K487d+ThhOEh9600Ya6L1CDZ2Q9g7DkOisOGnqZ/vFpCXBjfmbBeEusCstYbnlgqPcuecLCQUnppH1z4hIcxayzDs5SB7ncezzapo5jdbGWvOOH783U/Ev9y9XFt77xCoDOEr3YjiJV8jnmQePtHMgHANT6oAL9OCrzwQvYefZA7fBfBCsQLuYXmx4+0x8gPg/EqcVK2FKJ0Xz1wDTH+IKFNAptEBey2eod/f4sRzggWFfNROZpsN6XIZyUJhjBTZUaJkiwyQPk6TRV4sk8wXSD2BYIZBLF9BlC2Pw5RwdHTMf0wKm8SMzISZ1TPMGOKiyE2n0Fi9eKYfzzzn0Mdhth/DfbiPfbdbnAM3Dg4OIJPJRm/1jFQPY+AKBm93HF8PZm8VW0cU9L7+WF1PWDu9gf0whDe7O3A6nRNxuVyQSqUjsVS+APZWfJ2myfwkqm0E0uQLZSCeYYfASTgGh93+78QSiQQLSiUUCwviKBT83EysE7g6N4xfgstwLkH8f/AXNvZDbb2SgVkAAAAASUVORK5CYII=) -0px -0px  no-repeat;
+    font-size: 18px;
+    font-weight: bold;
+    height: 30px;
+    line-height: 36px;
+    overflow: visible;
+    padding-left: 35px;
+    width: auto;
+    color: #fff;
+    display: inline;
+    color: #fff;
+}
+
+.vpHeadingTitleContainer {
+    background-color: #009f87;
+    width: 245px;
+    border-bottom: 3px solid #cecece;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 37px;
+}
+
+.geSidebar .geItem .dropDownButton {
+    cursor: pointer;
+    background-image: url('../DropDownArrow.gif');
+    
+    position: relative;
+}
+
+.vpExpandedPaletteItemsBackgroundOverlay {
+    position: absolute;
+    
+    width: 100%;
+    height: 100%;
+}
+
+.vpExpandedPaletteItems {
+    position: absolute;
+    
+    -webkit-box-shadow:2px 2px 3px #d5d5d5;
+    -moz-box-shadow:2px 2px 3px #d5d5d5;
+    box-shadow:2px 2px 3px #d5d5d5;
+    _filter:progid:DXImageTransform.Microsoft.DropShadow(OffX=2, OffY=2, Color='#d0d0d0', Positive='true');
+    background:whitesmoke;
+    border:3px solid #e7e7e7;
+    padding:3px;
+}
+
+.vpModelNamesCompletionList {
+    overflow: auto;
+    position: absolute;
+    
+    width: 300px;
+    height: 200px;
+    
+    background-color: white;
+    border: 1px solid gray;
+}
+
+.vpModelNamesCompletionListItem {
+    padding: 4px;
+}
+
+.vpModelNamesCompletionSelectedListItem {
+    background-color: #c8e5bc;
+    color: black;
+}
+
+.vpResourceCatalogComponent {
+    border: 1px solid rgb(226, 226, 226);
+    background: white;
+    
+    width: 291px;
+    height: 196px;
+    
+    position: absolute;
+    overflow: hidden;
+}
+
+.vpResourceCatalogPage {
+    position: absolute;
+    
+    width: 100%;
+    height: 100%;
+}
+
+.vpResourceCatalogItemPanel {
+    border: 1px solid rgb(226, 226, 226);
+    
+    position: absolute;
+    
+    top: 8px;
+    left: 8px;
+    bottom: 48px;
+    right: 8px;
+}
+
+.vpResourceCatalogTooltip {
+    position: absolute;
+    
+    text-align: center;
+    font-size: 12px;
+    
+    width: 100%;
+    bottom: 5px;
+}
+
+.vpResourceCatalogItemComponent {
+    border: 1px solid rgb(226, 226, 226);
+    
+    background-size: 36px 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    position: absolute;
+    
+    width: 45px;
+    height: 36px;
+}
+
+.vpPertTaskMemberList {
+    background: white;
+    position: absolute;
+    
+    height: 140px;
+    border: 1px solid #4d4d4d;
+    overflow: auto;
+}
+
+.vpPertTaskMemberListItem {
+    background: white;
+    cursor: pointer;
+    padding: 0 3px 0 3px; 
+}
+
+.vpPertTaskMemberListItem:hover {
+    background: #d9d9d9;
+}
+
+.vpResourceCatalogItemComponent:hover {
+    background-color: rgb(173, 225, 255);
+}
+
+.vpResourceCatalogPageSelectorItem {
+    border: 1px solid rgb(153, 153, 153);
+
+    position: relative;
+    display: inline-block;
+    
+    width: 12px;
+    height: 12px;
+    
+    /* Size includes also border just like in VP. */
+    box-sizing: border-box;
+
+    /* Make it an oval. */    
+    border-radius: 50%;
+}
+
+.vpResourceCatalogPageSelector {
+    position: relative;
+    
+/*    Both resource catalog's selector and item style is very hard to get it right,
+    current setting mainly based on trial-and-error and not really understand why it works.*/
+    bottom: -156px;
+    
+    /* Align center horizontally. */
+    margin: 0 auto;
+    
+    width: auto;
+    height: auto;
+}
+
+.geSprite-save { background-position: -22px 2px; }
+.geSprite-copy { background-position: -22px -46px; }
+.geSprite-paste { background-position: -22px -92px; }
+.geSprite-group { background-position: -22px -138px; }
+.geSprite-sendto { background-position: -22px -184px; }
+.geSprite-distribute { background-position: -22px -230px; }
+.geSprite-formatcopier { background-position: -22px -276px; }
+.geSprite-spacer { background-position: -22px -319px; }
+.geSprite-edgeresizer { background-position: -22px -368px; }
+.geSprite-sweeper { background-position: -22px -414px; }
+.geSprite-magnet { background-position: -22px -460px; }
+
+
+.geSprite-collapseVpHeader {
+	background:url('../../images/vp/Collapse.png');
+	_background:url('../../images/vp/Collapse.png') no-repeat top left;
+}
+
+.geSprite-expandVpHeader {
+	background:url('../../images/vp/Expand.png');
+	_background:url('../../images/vp/Expand.png') no-repeat top left;
+}
+
+
+.vpResourceCatalogItemComponentIcon {
+    width: 36px;
+    height: 36px;
+    
+    display: block;
+    margin: 0 auto;
+}
+
+.vpStrategicAnalysisDataEditorCloseButton {
+    cursor: pointer;
+    position: absolute;
+    
+    top: 5px;
+    right: 5px;
+}
+
+ 
+
+.k-i-new-indent:before{
+	content: "\e615"
+}
+
+.k-i-new-outdent:before{
+	content: "\e616"
+}
+
+/* Decrease indent of info art editor bullet point list */
+.k-editor-inline ul {
+	padding-left: 1.4em
+}
+
+
+
+/* In VP it didn't pickup this box-sizing style, so force it. */
+.geStyleButton {
+	box-sizing: border-box;
+}
+
+
+.graphStickbar {
+	padding: 4px;
+    position: absolute;
+	background-color: #f1f1f1;
+	display: flex;
+	align-items: center;
+}
+
+
+
+.nonSelectableElement {
+	cursor: default;
+	
+	  -webkit-touch-callout: none; /* iOS Safari */
+		-webkit-user-select: none; /* Safari */
+		 -khtml-user-select: none; /* Konqueror HTML */
+		   -moz-user-select: none; /* Firefox */
+			-ms-user-select: none; /* Internet Explorer/Edge */
+				user-select: none; /* Non-prefixed version, currently
+									  supported by Chrome and Opera */
+}
+
+
+
+.graphStickbarStatus {
+	padding: 3px;
+	padding-left: 4px;
+	
+	border-style: solid;
+	border-width: 1px;
+	
+	display: inline-block;
+	white-space: nowrap;
+}
+
+
+.graphStickbarStatusMainMessage {
+	color: #686868;
+	padding-left: 12px;
+
+	flex-grow: 1;
+	text-overflow: ellipsis;
+	overflow-x: hidden;
+	white-space: nowrap;
+}
+
+
+
+.graphStickbarStatusText {
+	color: #686868;
+	padding-left: 4px;
+	padding-right: 3px;
+	
+}
+
+.graphStickbarStatusDot {
+	width: 10px;
+	height: 10px;
+	
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.selectGoogleCloudPlatformUserAndDeviceInputGridContainer {
+	display: grid; 
+	
+	grid-row-gap: 9px; 
+	grid-template-columns: auto auto auto auto auto auto
+}
+
+.selectGoogleCloudPlatformUserAndDeviceInputShapeItem {
+	box-sizing: border-box;
+	position: relative;
+	
+	width: 85px;
+	height: 92px;
+}
+
+.selectGoogleCloudPlatformUserAndDeviceInputShapeItemImage {
+	padding-top: 5px;
+	display: block;
+	margin: auto
+}
+
+.selectGoogleCloudPlatformUserAndDeviceInputShapeItemText {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	bottom: 2px;
+	line-height: 1.1;
+}
+
+
+
+.vpActionsPanel {
+    width: 56px;
+    right: 0;
+    
+    overflow: visible;
+    background-color: white;
+    border-left: 1px solid #dadce0;
+    box-sizing: border-box;
+}
+
+.vpActionsPanelButton {
+    width: 56px;
+    height: 56px;
+    
+    position: relative;
+}
+
+.vpActionsPanelButtonIcon {
+    width: 40px;
+    height: 40px;
+    
+    top: 8px;
+    left: 8px;
+    
+    position: absolute;
+    
+    background-position: center center;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+
+    pointer-events: none;
+}
+
+.vpActionsPanelButtonIconBackground {
+    top: 8px;
+    left: 8px;
+    
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+
+    border-radius: 50%;
+    transition: all .3s cubic-bezier(.4,0,.2,1);    
+    cursor: pointer;
+}
+
+.vpActionsPanelToggleVisibleButton {
+    width: 56px;
+    height: 56px;
+    
+    position: absolute;
+    
+    bottom: 0;
+    right: 0;
+}
+
+.vpActionsPanelToggleVisibleButtonCollapsed .vpActionsPanelToggleVisibleButtonIconContainer {
+    margin-left: -6px;
+}
+
+.vpActionsPanelToggleVisibleButtonCollapsed:hover .vpActionsPanelToggleVisibleButtonIconContainer {
+    margin-left: 0;
+}
+
+.vpActionsPanelToggleVisibleButtonCollapsed {
+    right: -24px;
+    
+    transition: all .3s cubic-bezier(.4,0,.2,1);
+}
+
+.vpActionsPanelToggleVisibleButtonCollapsed:hover {
+    right: 0;
+    margin-left: 0;
+}
+
+.vpActionsPanelToggleVisibleButtonIconBackground {
+    width: 40px;
+    height: 40px;
+    
+    position: absolute;
+    
+    top: 8px;
+    left: 8px;
+    
+    border-radius: 50%;
+    
+    transition: all .3s cubic-bezier(.4,0,.2,1);
+    background-color: white;
+    cursor: pointer;
+}
+
+.vpActionsPanelToggleVisibleButtonIconBackground:hover {
+    background-color: #f1f3f4;
+}
+
+.vpActionsPanelToggleVisibleButtonIconBackgroundCollapsed {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    
+    width: calc(56px - 8px - 10px);
+    height: 20px;
+    
+    top: 0;
+    left: 0;
+    
+    margin: 8px 0 8px 8px;
+    padding: 10px 0 10px 10px;
+
+    box-shadow: 0 1px 1px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+}
+
+.vpActionsPanelToggleVisibleButtonIconContainer {
+    width: 40px;
+    height: 40px;
+    
+    position: absolute;
+    
+    top: 8px;
+    left: 8px;
+    
+    display: flex;
+    align-items: center;
+    
+    pointer-events: none;
+}
+
+.vpActionsPanelToggleVisibleButtonIcon {
+}
+
+.vpActionsPanelToggleVisibleButtonIconCollapsed {
+    transform: rotate(180deg);
+}
+
+.vpActionsPanelButtonIconBackground:hover {
+    background-color: #f1f3f4;
+}
+
+.vpActionsPanelButtonIconBackgroundSelected {
+    background-color: #E8F0FE;
+}
+
+.vpActionsPanelButtonIconBackgroundSelected:hover {
+    background-color: #D2E3FC;
+}
+
+
+.tabButtonContainer {
+	float:left;
+	width:100%;
+	height:100%;
+}
+.tabButtonContainer.leftPosition {
+	font-size:0px;
+	overflow:auto;
+}
+.tabButtonContainer.topPosition {
+	display:flex;
+}
+.tabPanelContainer {
+	position:relative;
+	float:left;
+	width:100%;
+	height:100%;
+}
+.tabButton {
+	cursor:pointer;
+}
+.tabButton.withIcon {
+	padding-top:1px;
+	padding-bottom:1px;
+	padding-left:1px;
+	padding-right:1px;
+	overflow:hidden;
+}
+.tabButton.withIcon img {
+	width:20px;
+	height:20px;
+	margin:5px;
+}
+.tabButton.withIcon.leftPosition {
+	width:100%;
+	height:30px;
+}
+.tabButton.withIcon.topPosition {
+	width:30px;
+	height:100%;
+}
+.tabButton.withText {
+	height:32px;
+	line-height:32px;
+	padding-left:5px;
+	padding-right:5px;
+}
+.tabButton.withIcon.withText.leftPosition {
+	font-size:10px;
+	text-align:center;
+	width:100%;
+	height:65px;
+	line-height:0px;
+	padding-left:0px;
+	padding-right:0px;
+}
+.tabButton.withIcon.withText.leftPosition img {
+	margin-bottom:7px;
+}
+.tabPanelContainer.selectedTab {
+}
+.tabPanelContainer.deselectedTab {
+}
+.tabButton.selectedTab {
+	background:#F7F7F7;
+}
+.tabButton.withIcon.selectedTab {
+	background:#E8F0FE;
+	/* border-radius: 50%; */
+	/* transition:all .3s cubic-bezier(.4,0,.2,1); */
+}
+.tabButton.withText.selectedTab.topPosition {
+	text-decoration:underline;
+	border-radius:10px 10px 10px 10px;
+	transition:all .3s;
+}
+.tabButton.deselectedTab {
+}
+.tabButton.showTab {
+}
+.tabButton.hideTab {
+} 
+
+
+
+.editLegendEntryDialog .geToolbarContainer {
+	background:transparent;
+	border-bottom:none;
+}
+	
+/* Fix h2 styles overridden by bootstrap . */
+.geEditor h2 {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.reorderableColorSetComponentPlaceholder {
+	display: inline-block;
+	width: 12.5%;
+	height: 100%;
+	background: transparent
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Customize the label (the container) */
+.customCheckboxContainer {
+  display: inline-block;
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.customCheckboxContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.customCheckboxCheckmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.customCheckboxContainer:hover input ~ .customCheckboxCheckmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.customCheckboxContainer input:checked ~ .customCheckboxCheckmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.customCheckboxCheckmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.customCheckboxContainer input:checked ~ .customCheckboxCheckmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.customCheckboxContainer .customCheckboxCheckmark:after {
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2.4px 2.4px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+} 
+
+.svgColorButtonsContainer {
+    display: inline-grid;
+    grid-gap: 8px;
+    
+    padding-top: 4px;
+    padding-bottom: 6px;
+    grid-template-columns: auto auto auto auto auto auto;
+}
+
+.masonryLayoutItem .paidItemDiv {
+    position: absolute;
+    right: -3px;
+    top: -3px;
+}
+
+.paidItemDiv {
+    position: absolute;
+    margin-left: 41px;
+    margin-top: -5px;
+}
+
+.paidItemImg {
+}
+
+.masonryLayoutItem .countItemDiv {
+    position: absolute;
+    top: calc(100% - 18px);
+    font-size: x-small;
+    line-height: 1em;
+    background-color: #DF6094;
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 2px 8px;
+    margin: 2px;
+    color: White;
+    border-radius: 3px;
+}
+
+.photoPaletteCaption {
+    position: relative;
+    text-align: right;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.mapPaletteCaption {
+    position: relative;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+    line-height: 1.1em;
+}
+
+.chartPaletteCaption {
+    position: relative;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+    line-height: 1.1em;
+    bottom: 4px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.filterLabel {
+    font-size: 11px;
+    padding-left: 5px;
+}
+
+.filterItem {
+    font-size: 11px !important;
+    line-height: 21px;
+    margin-top: 5px;
+    margin-bottom: 5px !important;
+    padding-right: 10px;
+    padding-left: 0px;
+    border-radius: 24px;
+    color: #fff;
+    padding-right: 8px !important;
+    padding-left: 8px !important;
+    border-width: 0px;
+    background-color: #d2d2d2;
+}
+
+.filterItemSelected {
+    font-size: 11px !important;
+    line-height: 21px;
+    margin-top: 5px;
+    margin-bottom: 5px !important;
+    padding-right: 10px;
+    padding-left: 0px;
+    border-radius: 24px;
+    color: white;
+    padding-right: 8px !important;
+    padding-left: 8px !important;
+    background-color: #DF6094 !important;
+    border-width: 0px;
+}
+
+tr.mxPopupMenuItem td.mxPopupMenuItem img.pinButton {
+    // display: none;
+    display: inline-block;
+}
+
+tr.mxPopupMenuItemHover img.mxPopupMenuItem img.pinButton {
+    display: inline-block;
+}
+html body .mxPopupMenuItem>img.pinButton {
+    filter: none !important;
+}
+
+tr.mxPopupMenuItem td.mxPopupMenuItem img.unpinButton {
+    display: inline-block;
+}
+
+tr.mxPopupMenuItemHover img.mxPopupMenuItem img.unpinButton {
+    display: inline-block;
+}
+html body .mxPopupMenuItem>img.unpinButton {
+    filter: none !important;
+}
+.mxPopupMenuItemActive {
+    background-color: #ebebeb;
+}
+.fontFamilyItem {
+    line-height: 0.15;
+}
